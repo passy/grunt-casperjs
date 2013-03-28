@@ -35,6 +35,10 @@ exports.init = function(grunt) {
     if (options.post) {
       command += ' --post=' + options.post.join(',');
     }
+	
+	if (options.webSecurity === false) {
+      command += ' --web-security=no';
+    }
 
     if (options.ignoreSslErrors) {
       command += ' --ignore-ssl-errors=yes';
