@@ -63,6 +63,9 @@ exports.init = function(grunt) {
       command += ' --ssl-protocol='+ options.sslProtocol;
     }
 
+    if (options.cookiesFile) {
+      command += ' --cookies-file='+ options.cookiesFile;
+    }
 
 
     command += " " + filepath;
